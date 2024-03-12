@@ -85,21 +85,21 @@ export function AddProduct() {
                 </div>
             </div>
             <div className="content-container">
-                <div className=''>
+                <div className='form-fields'>
                     {error && <p>{error}</p>}
-                    <div>
+                    <div className='form-fields-input'>
                         <label>SKU</label>
                         <input id='sku' type="text" value={sku} onChange={(e) => setSKU(e.target.value)}/>
                     </div>
-                    <div>
+                    <div className='form-fields-input'>
                         <label>Name</label>
                         <input id='name' type="text" value={product_name} onChange={(e) => setProductName(e.target.value)}/>
                     </div>
-                    <div>
+                    <div className='form-fields-input'>
                         <label>Price ($)</label>
                         <input id='price' type="text" value={price} onChange={(e) => setPrice(e.target.value)}/>
                     </div>
-                    <div>
+                    <div className='form-fields-input'>
                         <label>Type Switcher</label>
                         <select id='productType' onChange={changeType}>
                             <option value="disk">Disk</option>
@@ -107,26 +107,26 @@ export function AddProduct() {
                             <option value="furniture">Furniture</option>
                         </select>
                     </div>
-                    {disk && <div>
+                    {disk && <div className='form-fields-input'>
                         <label>Size (MB)</label>
                         <input id='size' type="text" value={size} onChange={(e) => setSize(e.target.value)}/>
                         <p>Please provide size in whole numbers</p>
                         </div>}
-                    {book && <div>
+                    {book && <div className='form-fields-input'>
                         <label>Weight (KG)</label>
                         <input id='weight' type="text" value={product_weight} onChange={(e) => setProductWeight(e.target.value)}/>
                         <p>Please provide weight in 0.000 format</p>
                         </div>}
-                    {furniture && <div>
-                        <div>
+                    {furniture && <div className='form-fields-input'>
+                        <div className='form-fields-input'>
                         <label>Heigth (CM)</label>
                         <input id='height' type="text" value={heigth} onChange={(e) => setHeigth(e.target.value)}/>
                         </div>
-                        <div>
+                        <div className='form-fields-input'>
                         <label>Width (CM)</label>
                         <input id='width' type="text" value={width} onChange={(e) => setWidth(e.target.value)}/>
                         </div>
-                        <div>
+                        <div className='form-fields-input'>
                         <label>Length (CM)</label>
                         <input id='lenght' type="text" value={length} onChange={(e) => setLength(e.target.value)}/>
                         </div>

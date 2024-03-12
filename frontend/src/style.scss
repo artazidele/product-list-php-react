@@ -4,6 +4,17 @@ $borderColor: gray;
     padding: 5%;
     font-size: 0.8rem;
 }
+.form-fields {
+    max-width: 300px;
+    row-gap: 20px;
+}
+.form-fields input, select {
+    float: right;
+    width: 60%;
+}
+.form-fields-input {
+    margin-top: 20px;
+}
 
 .about_product {
     text-align: center;
