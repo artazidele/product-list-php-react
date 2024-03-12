@@ -26,7 +26,7 @@ export function AllProducts() {
     const fetchProducts = () => {
         setProducts(null);
 
-        fetch('http://localhost/2-03-2024/server/get_products.php')
+        fetch('./get_products.php')
             .then((res) => res.json())
             .then((data) => {
                 setProducts(data);
@@ -42,7 +42,7 @@ export function AllProducts() {
         deleteId.map(id =>{
             let formData = new FormData();
             formData.append('deleteId', id)
-            axios.post("http://localhost/2-03-2024/server/delete_products.php", formData)
+            axios.post("./delete_products.php", formData)
             .then(response=>{
                 if (response.data === "Success") {
                     deletedProducts += 1;

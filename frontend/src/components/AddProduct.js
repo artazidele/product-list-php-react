@@ -60,7 +60,8 @@ export function AddProduct() {
         formData.append('length', length)
         formData.append('width', width)
 
-        axios.post("http://localhost/2-03-2024/server/add_product.php", formData)
+        // axios.post("http://localhost/2-03-2024/server/add_product.php", formData)
+        axios.post("./add_product.php", formData)
         .then(response=>{
             if (response.data === "Success") {
                 window.location = "/";
@@ -102,7 +103,7 @@ export function AddProduct() {
                     <div className='form-fields-input'>
                         <label>Type Switcher</label>
                         <select id='productType' onChange={changeType}>
-                            <option value="disk">Disk</option>
+                            <option value="disk">DVD</option>
                             <option value="book">Book</option>
                             <option value="furniture">Furniture</option>
                         </select>
@@ -128,7 +129,7 @@ export function AddProduct() {
                         </div>
                         <div className='form-fields-input'>
                         <label>Length (CM)</label>
-                        <input id='lenght' type="text" value={length} onChange={(e) => setLength(e.target.value)}/>
+                        <input id='length' type="text" value={length} onChange={(e) => setLength(e.target.value)}/>
                         </div>
                         <p>Please provide dimensions in HxWxL format</p>
                         </div>}
